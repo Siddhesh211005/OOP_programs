@@ -1,0 +1,60 @@
+import java.util.*;
+class person{
+
+    private String FirstName;
+    private String lastName;
+
+
+
+    void getFirstName(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first name");
+        FirstName = sc.nextLine();
+        System.out.println("The first Name is  "+FirstName);
+    }
+
+    void getLastName(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the last name");
+        lastName = sc.nextLine();
+        System.out.println("The last  Name is  "+lastName);
+
+    }
+
+}
+
+class Employee extends person{
+
+    private String employeeeID;
+
+    private String Jobtitle;
+    Scanner sc = new Scanner(System.in);
+    void getEmployeeID(){
+        System.out.println("Enter employee ID");
+        employeeeID = sc.nextLine();
+        System.out.println("The employee id is employeeID"+ employeeeID);
+    }
+
+    @Override
+    void getLastName() {
+        super.getLastName();
+        System.out.println("Enter job title");
+        Jobtitle = sc.nextLine();
+        System.out.println("Job title is "+Jobtitle);
+
+    }
+}
+
+
+
+public class main2 {
+    public static void main(String[] args){
+
+        Employee e = new Employee();
+        e.getFirstName();
+        e.getLastName();
+
+
+        
+    }
+}
