@@ -1,0 +1,52 @@
+package Q5;
+import java.util.Scanner;
+class bank_account{
+	int dep,with;
+	void deposit() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter deposit ammount:\n");
+		dep=sc.nextInt();
+		sc.close();
+	}
+	void withdraw() {
+		System.out.println("Enter withdrawal ammount:\n");
+		Scanner sc=new Scanner(System.in);
+		with=sc.nextInt();
+		sc.close();
+		if(with<dep) {
+			System.out.println(with+"\tammount withdrawn");
+		}
+	}
+}
+class saving_account extends bank_account{
+	void withdraw() {
+		System.out.println("Enter withdrawal ammount:\n");
+		Scanner sc=new Scanner(System.in);
+		with=sc.nextInt();
+		sc.close();
+		if(with>100) {
+			System.out.println(with+"\tammount withdrawn");
+		}
+		else System.out.println("ammount cannot be withdrawn<100.");
+	}
+}
+public class Main5 {
+
+	public static void main(String[] args) {
+		bank_account b=new saving_account();
+		b.withdraw();
+
+	}
+
+}
+----------------OUTPUT---------------
+Enter withdrawal ammount:
+
+500
+500	ammount withdrawn
+--------------OUTPUT2----------------
+Enter withdrawal ammount:
+
+50
+ammount cannot be withdrawn<100.
+
