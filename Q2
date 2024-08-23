@@ -1,0 +1,22 @@
+package Q2;
+class Vehicle{
+	void drive() {
+		System.out.println("drive in vehicle");
+	}
+}
+class Car extends Vehicle{
+	void drive() {
+		System.out.println("Repairing a car");
+	}
+}
+public class Main2 {
+
+	public static void main(String[] args) {
+		Vehicle v=new Car();
+		v.drive();
+
+	}
+
+}
+------------------OUTPUT------------------
+Repairing a car
