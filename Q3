@@ -1,0 +1,49 @@
+package Q3;
+import java.util.*;
+class Employee{
+	void get_salary() {
+		
+	}
+	void work() {
+		System.out.println("Work in Employee.");
+	}
+}
+class HRmanager extends Employee{
+	void work() {
+		System.out.println("Work in HRmanager.");
+	}
+	void add_employee() {
+		System.out.println("Would you like to add employee?\n 1.yes\t 2.no");
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		sc.close();
+		if(a==1) {
+			System.out.println("Employee Added succesfully.");
+		}
+		else System.out.println("No new employee added.");
+		
+	}
+}
+public class Main3 {
+
+	public static void main(String[] args) {
+		Employee obj=new HRmanager();
+		obj.work();
+		HRmanager obj2=new HRmanager();
+		obj2.add_employee();
+	}
+
+}
+--------------OUTPUT------------------
+Work in HRmanager.
+Would you like to add employee?
+ 1.yes	 2.no
+1
+Employee Added succesfully.
+
+--------------OUTPUT2----------------
+Work in HRmanager.
+Would you like to add employee?
+ 1.yes	 2.no
+2
+No new employee added.
