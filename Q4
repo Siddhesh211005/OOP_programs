@@ -1,0 +1,21 @@
+package Q4;
+class Shape{
+	void getarea() {
+		System.out.println("Calculates area of shape.");
+	}
+}
+class Rectangle extends Shape{
+	void getarea() {
+		System.out.println("Calculates area of rectangle.");
+	}
+}
+public class Main4 {
+
+	public static void main(String[] args) {
+		Shape obj=new Rectangle();
+		obj.getarea();
+	}
+
+}
+---------------OUTPUT---------------------
+Calculates area of rectangle.
