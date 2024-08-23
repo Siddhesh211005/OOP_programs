@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+class shape{
+    private double radius;
+    Scanner sc = new Scanner(System.in);
+
+    public void getperimeter(){
+
+    }
+
+    public void getarea(){
+
+    }
+
+
+}
+
+class circle extends shape{
+
+    private double radius;
+
+    circle(){
+        System.out.println("Enter the radius ");
+        radius = sc.nextDouble();
+    }
+
+
+
+    public void getperimeter(){
+
+        double pm = 2*3.14 * radius;
+        System.out.println("Perimeter of circle is "+pm);
+    }
+
+    public void getarea(){
+
+        double ar = 3.14*3.14*radius;
+        System.out.println("Area odf circle is "+ ar);
+
+    }
+}
+
+
+
+
+
+
+
+public class Main3 {
+
+    public static void main(String [] args){
+
+        circle c = new circle();
+        c.getperimeter();
+        c.getarea();
+    }
+}
